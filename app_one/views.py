@@ -6,11 +6,13 @@ def index(request):
     #it's a django thing 
     return render(request, "index.html")
 
-def people(request, name):
+
+def people(request):
     # context is a django thing again for using variables in html
     #we use a dictionary as in "name we use in html": name we use in this file
     context = {
-        "htmlname": name
+        "htmlname": "saeed",
+        "pets": ["Bruce", "Fitz", "Georgie"]
     }
     return render(request, "hello_name.html", context)
 
